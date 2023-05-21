@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+	* {
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
+	/*imagens flexiveis*/
+	img {   
+		border-radius: 50%;
+  		max-width: 140px;   
+		max-height: 140px;
+  		
+	} 
+	body, html{
+		
+        height: 100%;
+	}
+
+	
+	.fotinha {
+		grid-area: fotinha;
+		width: auto;
+		margin-left: 3px;
+		margin-top: 3px;
+		border-color: aqua;
+	}
+
+	.cabecalho {
+		grid-area: titulo;
+		text-align: center;
+  		display: grid;
+ 		align-items: center;
+		vertical-align: middle;
+		align-self: center;
+
+	}
+
+	.cabecao {
+		display: grid;
+		grid-template-columns: 20% 80%;
+		grid-template-areas: "fotinha titulo";
+		background-color: white;
+	}
+
+	.corpo {
+		display: grid;
+		grid-template-columns: 70% 30%;
+		grid-template-areas: "formacao sm"
+							 "desc sm"
+							 "experiencia sm"
+							 "descricaoexp sm"
+							 "realizacoes sm"
+							 "descricaorlz sm ";
+		
+	}
+
+	.Formacao {
+		background-color: aqua;
+		grid-area: formacao;
+		text-align: center;
+	}
+
+	.descricao_fmc{
+		grid-area: desc;
+		font-size: 120%;
+	}
+
+	.sm{
+		grid-area: sm;
+		text-align: center;
+		background-color:gray;
+		color: white;
+		vertical-align: middle;
+		align-items: center;
+		
+		
+	}
+
+	.experiencia{
+		grid-area: experiencia;
+		background-color: aqua;
+		text-align: center;
+		
+	}
+
+	.descricao_exp {
+		grid-area: descricaoexp;
+		font-size: 120%;
+	}
+
+	.realizacoes {
+		grid-area: realizacoes;
+		background-color: aqua;
+		text-align: center;
+	}
+
+	.descricao_rlz {
+		grid-area: descricaorlz;
+		font-size: 120%;
+	}
+
+	h2 {
+		font-size: 95%;
+	}
+/*seletores para desktops*/
+
+@media screen and (max-width: 1128px) {
+	#conteudo{ 
+	   width: 70%;
+	}
+	#lateral{ 
+	   width: 30%;
+	}
+}
+
+/*seletores para tablets*/
+
+@media screen and (max-width: 768px) {
+	.cabecao {
+		display: grid;grid-template-columns: 30% 70%;
+		grid-template-areas: "fotinha titulo";
+		background-color: rgb(234, 16, 16);
+	}
+
+	.corpo {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas: "formacao sm"
+							 "desc sm"
+							 "experiencia sm"
+							 "descricaoexp sm"
+							 "realizacoes sm"
+							 "descricaorlz sm ";
+		
+	}
+}
+
+/*seletores para celurares*/
+
+@media screen and (max-width: 520px) {
+	.cabecao {
+		display: grid;grid-template-columns: 35% 65%;
+		grid-template-areas: "fotinha titulo";
+		background-color: rgb(142, 255, 12);
+	}
+
+	.corpo {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-areas: "sm"
+							"formacao"
+							 "desc"
+							 "experiencia"
+							 "descricaoexp"
+							 "realizacoes"
+							 "descricaorlz";
+		
+	}
+}

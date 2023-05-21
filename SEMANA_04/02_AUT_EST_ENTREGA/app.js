@@ -65,5 +65,5 @@
     });
     
     app.listen(port, hostname, () => {
-        console.log(`Servidor rodando em http://${hostname}:${port}/`);
-        });
+    console.log(`Servidor rodando em http://${hostname}:${port}/`);
+    });
