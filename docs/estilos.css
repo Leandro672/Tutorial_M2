@@ -38,8 +38,8 @@
 
 	.cabecao {
 		display: grid;
-		grid-template-columns: 20% 80%;
-		grid-template-areas: "fotinha titulo";
+		grid-template-columns: 20% 60% 10% 10%;
+		grid-template-areas: "fotinha titulo dm aviso";
 		background-color: white;
 	}
 
@@ -98,6 +98,29 @@
 	.descricao_rlz {
 		grid-area: descricaorlz;
 		font-size: 120%;
+	}
+
+	.btn1{
+		grid-area: dm;
+		height: 20px;
+		width: 60px;
+		text-align: center;
+  		display: grid;
+ 		align-items: center;
+		vertical-align: middle;
+		align-self: center;
+		
+	}
+
+	.btn2{
+		grid-area: aviso;
+		height: 20px;
+		width: 60px;
+		text-align: center;
+  		display: grid;
+ 		align-items: center;
+		vertical-align: middle;
+		align-self: center;
 	}
 
 	h2 {
