@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = 'curriculo.db';
+const DBPATH = '../data/curriculo.db';
 
 const hostname = '127.0.0.1';
-const port = 3071;
+const port = 6972;
 const app = express();
 
 /* Servidor aplicação */
@@ -32,3 +32,7 @@ app.post('/userupdate', urlencodedParser, (req, res) => {
     });
     db.close(); // Fecha o banco
 });
+
+app.listen(port, hostname, () => {
+    console.log(`Page server running at http://${hostname}:${port}/`);
+  });
