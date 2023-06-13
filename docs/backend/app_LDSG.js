@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = '../data/curriculo.db';
+const DBPATH = 'docs/backend/data/curriculo.db';
 
 const hostname = '127.0.0.1';
 const port = 6972;
@@ -11,7 +11,7 @@ const app = express();
 
 /* Servidor aplicação */
 
-app.use(express.static("../frontend/"));
+app.use(express.static("docs/frontend/"));
 /* Definição dos endpoints */
 
 /******** CRUD ************/
